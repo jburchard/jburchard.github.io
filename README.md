@@ -21,5 +21,6 @@ The goal of the GOTV tracker is to solve for this. There are a few guiding goals
   - Organization >> Staging Locations >> Turf
   - HQ >> Staging Locations >> Canvasser Van >> Turf
 
+
 - Simple Reporting: A simple dashboard that allows for reporting 
 
