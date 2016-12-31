@@ -16,7 +16,6 @@ The goal of the GOTV tracker is to solve for this. There are a few guiding goals
 - Simple and Intuitive Data Entry: It should be completely intuitive for anyone to update the status of packets and the should be unable to break the tracker through an errant click. The goal is to keep the page uncluttered and allow for fast and error-free data entry.
 
 - Flexible Hierarchy: Reporting structures come in all shapes and sizes and the tool should be flexible to allow for this. The tool will allow you to set easily set the hierarchy of reporting and turf, such as:
-
   - State HQ >> Regions >> Staging Location >> Precinct >> Turf
   - Organization >> Staging Locations >> Turf
   - HQ >> Staging Locations >> Canvasser Van >> Turf
