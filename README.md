@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## About
 
-You can use the [editor on GitHub](https://github.com/jburchard/jburchard.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a gallery of random projects I have or am in the process of developing. A few things things that you should know about this:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Most of them are tools built to support progressive politics and organizations. Therefore, it is unlikely that I will make the code base public. However, if you are of like mind and wish to collaborate, please do feel free to reach out.
 
-### Markdown
+- Most of them are works in progress and should be considered toy apps. They most likely have little test coverage and are not production ready. They will probably all break if pushed.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### GOTV Tracker
+This is a tool which seeks to solve for the constant challenge of tracking turf during GOTV. The best solutions that I've seen for this have been a series of linked GoogleDocs, with a bunch of protected cells and pivot tables. This is a great solution in that it relies on Google to keep the servers going if and when they inevitably get hammered by tons of viewers. However, it is still hard to maintain and needs to a bunch of work each time GOTV rolls around.
 
-```markdown
-Syntax highlighted code block
+The goal of the GOTV tracker is to solve for this. There are a few guiding goals behind this project:
 
-# Header 1
-## Header 2
-### Header 3
+- Simple and Intuitive Data Entry: It should be completely intuitive for anyone to update the status of packets and the should be unable to break the tracker through an errant click. The goal is to keep the page uncluttered and allow for fast and error-free data entry.
 
-- Bulleted
-- List
+- Flexible Hierarchy: The 
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jburchard/jburchard.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
