@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 3 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Slider -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/css/bootstrap-slider.css" rel="stylesheet">
+
+    <!-- Toggle -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--SLIDER LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.4/bootstrap-slider.js"></script>
+    <!--TOGGLE-->
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <style>
+    .lb-sm {
+  font-size: 12px;
+}
+
+.lb-md {
+  font-size: 14px;
+}
+
+.lb-lg {
+  font-size: 20px;
+}
+
+td.row_disabled {
+  color: #D3D3D3;
+  font-style: italic;
+}
+
+
+  </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    <h4>Data Entry Example</h4>
+    <div class="col-xs-12">
+      <input id="show_active" type="checkbox"/> Show Active
+      <table class="table table-inverse table-hover">
+        <thead>
+          <tr>
+              <td>Region</td>
+              <td>Staging Location</td>
+              <td>Precinct</td>
+              <td>Turf</td>
+              <td>Doors</td>
+              <td>Status</td>
+              <td>Change Status</td>
+              <td> <div id='walk_pct_header'>Walked Pct</div><td>
+              <td> <div id='active_header'>Active</div></td>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td>Northside</td>
+              <td>Haywood Tavern</td>
+              <td>W35-13</td>
+              <td>01</td>
+              <td>56</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide1val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide1"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct1').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row1').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row1").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row1").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active1').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active1").show();
+                //    } else {
+                //        $("#test_active1").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide1").slider();
+                $("#slide1").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide1val").text('Unwalked');
+                      $("#slide1val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct1").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide1val").text('Out');
+                      $("#slide1val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct1").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide1val").text('Walked');
+                      $("#slide1val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct1").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct1" data-slider-id="walk_pct1" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row1'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Northside</td>
+              <td>Haywood Tavern</td>
+              <td>W35-13</td>
+              <td>02</td>
+              <td>75</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide2val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide2"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct2').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row2').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row2").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row2").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active2').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active2").show();
+                //    } else {
+                //        $("#test_active2").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide2").slider();
+                $("#slide2").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide2val").text('Unwalked');
+                      $("#slide2val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct2").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide2val").text('Out');
+                      $("#slide2val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct2").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide2val").text('Walked');
+                      $("#slide2val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct2").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct2" data-slider-id="walk_pct2" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row2'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Northside</td>
+              <td>Haywood Tavern</td>
+              <td>W35-13</td>
+              <td>03</td>
+              <td>87</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide3val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide3"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct3').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row3').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row3").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row3").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active3').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active3").show();
+                //    } else {
+                //        $("#test_active3").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide3").slider();
+                $("#slide3").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide3val").text('Unwalked');
+                      $("#slide3val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct3").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide3val").text('Out');
+                      $("#slide3val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct3").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide3val").text('Walked');
+                      $("#slide3val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct3").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct3" data-slider-id="walk_pct3" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row3'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Southside</td>
+              <td>US Cellular Field</td>
+              <td>W25-04</td>
+              <td>03</td>
+              <td>39</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide4val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide4"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct4').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row4').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row4").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row4").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active4').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active4").show();
+                //    } else {
+                //        $("#test_active4").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide4").slider();
+                $("#slide4").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide4val").text('Unwalked');
+                      $("#slide4val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct4").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide4val").text('Out');
+                      $("#slide4val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct4").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide4val").text('Walked');
+                      $("#slide4val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct4").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct4" data-slider-id="walk_pct4" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row4'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Southside</td>
+              <td>US Cellular Field</td>
+              <td>W25-04</td>
+              <td>03</td>
+              <td>98</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide5val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide5"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct5').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row5').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row5").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row5").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active5').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active5").show();
+                //    } else {
+                //        $("#test_active5").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide5").slider();
+                $("#slide5").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide5val").text('Unwalked');
+                      $("#slide5val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct5").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide5val").text('Out');
+                      $("#slide5val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct5").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide5val").text('Walked');
+                      $("#slide5val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct5").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct5" data-slider-id="walk_pct5" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row5'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Southside</td>
+              <td>US Cellular Field</td>
+              <td>W25-04</td>
+              <td>03</td>
+              <td>104</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide6val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide6"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct6').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row6').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row6").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row6").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active6').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active6").show();
+                //    } else {
+                //        $("#test_active6").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide6").slider();
+                $("#slide6").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide6val").text('Unwalked');
+                      $("#slide6val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct6").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide6val").text('Out');
+                      $("#slide6val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct6").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide6val").text('Walked');
+                      $("#slide6val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct6").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct6" data-slider-id="walk_pct6" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row6'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+
+<!--TESTING AREA -->
+
+
+<!--END TESTING AREA -->
+
+    </div>
+  </div>
+  </body>
+</html>
