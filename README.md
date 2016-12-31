@@ -1,4 +1,4 @@
-## About
+# About This Gallery
 
 This is a gallery of random projects I have or am in the process of developing. A few things things that you should know about this:
 
@@ -8,7 +8,11 @@ This is a gallery of random projects I have or am in the process of developing. 
 
 ###### **That is making the assumption, that these tools are actually useful in winning campaigns, which is up for debate.*
 
-### GOTV Tracker
+# Projects
+
+## GOTV Tracker
+
+#### About
 This is a tool which seeks to solve for the constant challenge of tracking turf during GOTV. The best solutions that I've seen for this have been a series of linked GoogleDocs, with a bunch of protected cells and pivot tables. This is a great solution in that it relies on Google to keep the servers going if and when they inevitably get hammered by tons of viewers. However, it is still hard to maintain and needs to a bunch of work each time GOTV rolls around.
 
 The goal of the GOTV tracker is to solve for this. There are a few guiding goals behind this project:
@@ -20,6 +24,14 @@ The goal of the GOTV tracker is to solve for this. There are a few guiding goals
   - Organization >> Staging Locations >> Turf
   - HQ >> Staging Locations >> Canvasser Van >> Turf
 
+- Simple Reporting: A basic dashboard page that allows those directing the campaign to easily view key metrics of the progress through the GOTV Universe rolled up on multiple levels:
 
-- Simple Reporting: A simple dashboard that allows for reporting 
+  - Doors In/Out/Walked
+  - Packets In/Out/Walked
+  - Progress through multiple passes
+  
+#### Demos
+I am in the process of developing this and will be adding more links as they are developed.
 
+- (Data Entry)[/gotvtracker/data_entry]
+  
