@@ -66,7 +66,7 @@ td.row_disabled {
               <td>Doors</td>
               <td>Status</td>
               <td>Change Status</td>
-              <td> <div id='walk_pct_header'>Walked Pct</div><td>
+              <td>Walked Pct</a></div><td>
               <td> <div id='active_header'>Active</div></td>
           </tr>
         </thead>
@@ -79,7 +79,7 @@ td.row_disabled {
               <td>01</td>
               <td>56</td>
               <td> 
-                <span class="label label-default lb-md" id="slide1val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide01val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -92,55 +92,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide1"
+                      id="slide01"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct1').hide(); });
+                $(function() { $('#walk_pct01').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row1').hide(); });
+                $(function() { $('#active_row01').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row1").show();
+                        $("#active_row01").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row1").hide();
+                        $("#active_row01").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active1').click(function() {
+                //$('#active01').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active1").show();
+                //        $("#test_active01").show();
                 //    } else {
-                //        $("#test_active1").hide();
+                //        $("#test_active01").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide1").slider();
-                $("#slide1").on('slideStop', function(slideEvt) {
+                $("#slide01").slider();
+                $("#slide01").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide1val").text('Unwalked');
-                      $("#slide1val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct1").hide();
+                      $("#slide01val").text('Unwalked');
+                      $("#slide01val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct01").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide1val").text('Out');
-                      $("#slide1val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct1").hide();
+                      $("#slide01val").text('Out');
+                      $("#slide01val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct01").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide1val").text('Walked');
-                      $("#slide1val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct1").show();
+                      $("#slide01val").text('Walked');
+                      $("#slide01val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct01").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -149,12 +149,12 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct1" data-slider-id="walk_pct1" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct01" data-slider-id="walk_pct01" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row1'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row01'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
@@ -165,7 +165,7 @@ td.row_disabled {
               <td>02</td>
               <td>75</td>
               <td> 
-                <span class="label label-default lb-md" id="slide2val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide02val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -178,55 +178,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide2"
+                      id="slide02"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct2').hide(); });
+                $(function() { $('#walk_pct02').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row2').hide(); });
+                $(function() { $('#active_row02').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row2").show();
+                        $("#active_row02").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row2").hide();
+                        $("#active_row02").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active2').click(function() {
+                //$('#active02').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active2").show();
+                //        $("#test_active02").show();
                 //    } else {
-                //        $("#test_active2").hide();
+                //        $("#test_active02").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide2").slider();
-                $("#slide2").on('slideStop', function(slideEvt) {
+                $("#slide02").slider();
+                $("#slide02").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide2val").text('Unwalked');
-                      $("#slide2val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct2").hide();
+                      $("#slide02val").text('Unwalked');
+                      $("#slide02val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct02").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide2val").text('Out');
-                      $("#slide2val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct2").hide();
+                      $("#slide02val").text('Out');
+                      $("#slide02val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct02").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide2val").text('Walked');
-                      $("#slide2val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct2").show();
+                      $("#slide02val").text('Walked');
+                      $("#slide02val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct02").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -235,12 +235,12 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct2" data-slider-id="walk_pct2" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct02" data-slider-id="walk_pct02" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row2'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row02'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
@@ -251,7 +251,7 @@ td.row_disabled {
               <td>03</td>
               <td>87</td>
               <td> 
-                <span class="label label-default lb-md" id="slide3val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide03val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -264,55 +264,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide3"
+                      id="slide03"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct3').hide(); });
+                $(function() { $('#walk_pct03').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row3').hide(); });
+                $(function() { $('#active_row03').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row3").show();
+                        $("#active_row03").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row3").hide();
+                        $("#active_row03").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active3').click(function() {
+                //$('#active03').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active3").show();
+                //        $("#test_active03").show();
                 //    } else {
-                //        $("#test_active3").hide();
+                //        $("#test_active03").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide3").slider();
-                $("#slide3").on('slideStop', function(slideEvt) {
+                $("#slide03").slider();
+                $("#slide03").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide3val").text('Unwalked');
-                      $("#slide3val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct3").hide();
+                      $("#slide03val").text('Unwalked');
+                      $("#slide03val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct03").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide3val").text('Out');
-                      $("#slide3val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct3").hide();
+                      $("#slide03val").text('Out');
+                      $("#slide03val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct03").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide3val").text('Walked');
-                      $("#slide3val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct3").show();
+                      $("#slide03val").text('Walked');
+                      $("#slide03val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct03").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -321,12 +321,12 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct3" data-slider-id="walk_pct3" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct03" data-slider-id="walk_pct03" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row3'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row03'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
@@ -337,7 +337,7 @@ td.row_disabled {
               <td>03</td>
               <td>39</td>
               <td> 
-                <span class="label label-default lb-md" id="slide4val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide04val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -350,55 +350,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide4"
+                      id="slide04"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct4').hide(); });
+                $(function() { $('#walk_pct04').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row4').hide(); });
+                $(function() { $('#active_row04').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row4").show();
+                        $("#active_row04").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row4").hide();
+                        $("#active_row04").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active4').click(function() {
+                //$('#active04').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active4").show();
+                //        $("#test_active04").show();
                 //    } else {
-                //        $("#test_active4").hide();
+                //        $("#test_active04").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide4").slider();
-                $("#slide4").on('slideStop', function(slideEvt) {
+                $("#slide04").slider();
+                $("#slide04").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide4val").text('Unwalked');
-                      $("#slide4val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct4").hide();
+                      $("#slide04val").text('Unwalked');
+                      $("#slide04val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct04").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide4val").text('Out');
-                      $("#slide4val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct4").hide();
+                      $("#slide04val").text('Out');
+                      $("#slide04val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct04").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide4val").text('Walked');
-                      $("#slide4val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct4").show();
+                      $("#slide04val").text('Walked');
+                      $("#slide04val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct04").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -407,12 +407,12 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct4" data-slider-id="walk_pct4" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct04" data-slider-id="walk_pct04" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row4'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row04'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
@@ -423,7 +423,7 @@ td.row_disabled {
               <td>03</td>
               <td>98</td>
               <td> 
-                <span class="label label-default lb-md" id="slide5val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide05val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -436,55 +436,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide5"
+                      id="slide05"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct5').hide(); });
+                $(function() { $('#walk_pct05').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row5').hide(); });
+                $(function() { $('#active_row05').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row5").show();
+                        $("#active_row05").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row5").hide();
+                        $("#active_row05").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active5').click(function() {
+                //$('#active05').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active5").show();
+                //        $("#test_active05").show();
                 //    } else {
-                //        $("#test_active5").hide();
+                //        $("#test_active05").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide5").slider();
-                $("#slide5").on('slideStop', function(slideEvt) {
+                $("#slide05").slider();
+                $("#slide05").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide5val").text('Unwalked');
-                      $("#slide5val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct5").hide();
+                      $("#slide05val").text('Unwalked');
+                      $("#slide05val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct05").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide5val").text('Out');
-                      $("#slide5val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct5").hide();
+                      $("#slide05val").text('Out');
+                      $("#slide05val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct05").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide5val").text('Walked');
-                      $("#slide5val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct5").show();
+                      $("#slide05val").text('Walked');
+                      $("#slide05val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct05").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -493,12 +493,12 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct5" data-slider-id="walk_pct5" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct05" data-slider-id="walk_pct05" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row5'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row05'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
@@ -509,7 +509,7 @@ td.row_disabled {
               <td>03</td>
               <td>104</td>
               <td> 
-                <span class="label label-default lb-md" id="slide6val">Not Walked</span>
+                <span class="label label-default lb-md" id="slide06val">Not Walked</span>
               </td>
               <td>
                   <input
@@ -522,55 +522,55 @@ td.row_disabled {
                       data-slider-max="3"
                       data-slider-step="1"
                       data-slider-value="1"
-                      id="slide6"
+                      id="slide06"
                     > 
 
               <script type='text/javascript'>
                 
                 //Walk Pct Hide
-                $(function() { $('#walk_pct6').hide(); });
+                $(function() { $('#walk_pct06').hide(); });
                 $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
 
                 //Active Column Toggle
                 $(function() { $('#active_header').hide(); }); //Move above the loop
-                $(function() { $('#active_row6').hide(); });
+                $(function() { $('#active_row06').hide(); });
                 
                 $('#show_active').click(function() {
                     if( $(this).is(':checked')) {
                         $("#active_header").show();
-                        $("#active_row6").show();
+                        $("#active_row06").show();
                     } else {
                         $("#active_header").hide();
-                        $("#active_row6").hide();
+                        $("#active_row06").hide();
                     }
                 });
 
                 //Active Row Toggle
-                //$('#active6').click(function() {
+                //$('#active06').click(function() {
                 //    if( $(this).is(':checked')) {
-                //        $("#test_active6").show();
+                //        $("#test_active06").show();
                 //    } else {
-                //        $("#test_active6").hide();
+                //        $("#test_active06").hide();
                 //    }
                 // });
 
                 //Walk Slider
-                $("#slide6").slider();
-                $("#slide6").on('slideStop', function(slideEvt) {
+                $("#slide06").slider();
+                $("#slide06").on('slideStop', function(slideEvt) {
                     if(slideEvt.value =='1'){
-                      $("#slide6val").text('Unwalked');
-                      $("#slide6val").removeClass( "label-warning label-success" ).addClass("label-default");
-                      $("#walk_pct6").hide();
+                      $("#slide06val").text('Unwalked');
+                      $("#slide06val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct06").hide();
                     }
                     else if(slideEvt.value =='2'){
-                      $("#slide6val").text('Out');
-                      $("#slide6val").removeClass("label-default label-success").addClass("label-warning");
-                      $("#walk_pct6").hide();
+                      $("#slide06val").text('Out');
+                      $("#slide06val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct06").hide();
                     }
                     else if(slideEvt.value =='3'){
-                      $("#slide6val").text('Walked');
-                      $("#slide6val").removeClass( "label-default label-warning" ).addClass("label-success");
-                      $("#walk_pct6").show();
+                      $("#slide06val").text('Walked');
+                      $("#slide06val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct06").show();
                       $("#walk_pct_header").show()
                     }
                 });
@@ -579,12 +579,356 @@ td.row_disabled {
             </script>
               
               <td>
-                <input type="text" id="walk_pct6" data-slider-id="walk_pct6" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                <input type="text" id="walk_pct06" data-slider-id="walk_pct06" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
                 </div>
               <td></td>
               <td>
 
-              <div id='active_row6'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              <div id='active_row06'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Westside</td>
+              <td>United Center</td>
+              <td>W12-03</td>
+              <td>01</td>
+              <td>122</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide07val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide07"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct07').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row07').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row07").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row07").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active07').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active07").show();
+                //    } else {
+                //        $("#test_active07").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide07").slider();
+                $("#slide07").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide07val").text('Unwalked');
+                      $("#slide07val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct07").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide07val").text('Out');
+                      $("#slide07val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct07").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide07val").text('Walked');
+                      $("#slide07val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct07").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct07" data-slider-id="walk_pct07" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row07'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Westside</td>
+              <td>United Center</td>
+              <td>W12-03</td>
+              <td>01</td>
+              <td>102</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide08val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide08"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct08').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row08').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row08").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row08").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active08').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active08").show();
+                //    } else {
+                //        $("#test_active08").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide08").slider();
+                $("#slide08").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide08val").text('Unwalked');
+                      $("#slide08val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct08").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide08val").text('Out');
+                      $("#slide08val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct08").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide08val").text('Walked');
+                      $("#slide08val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct08").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct08" data-slider-id="walk_pct08" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row08'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Westside</td>
+              <td>United Center</td>
+              <td>W12-03</td>
+              <td>01</td>
+              <td>72</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide09val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide09"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct09').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row09').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row09").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row09").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active09').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active09").show();
+                //    } else {
+                //        $("#test_active09").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide09").slider();
+                $("#slide09").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide09val").text('Unwalked');
+                      $("#slide09val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct09").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide09val").text('Out');
+                      $("#slide09val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct09").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide09val").text('Walked');
+                      $("#slide09val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct09").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct09" data-slider-id="walk_pct09" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row09'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
+              </td>
+            </tr>
+          
+            <tr>
+              <td>Westside</td>
+              <td>United Center</td>
+              <td>W12-03</td>
+              <td>01</td>
+              <td>84</td>
+              <td> 
+                <span class="label label-default lb-md" id="slide10val">Not Walked</span>
+              </td>
+              <td>
+                  <input
+                      style="width: 100px;"
+                      type="text"
+                      name="somename"
+                      data-provide="slider"
+                      data-slider-ticks="[1, 2, 3]"
+                      data-slider-min="1"
+                      data-slider-max="3"
+                      data-slider-step="1"
+                      data-slider-value="1"
+                      id="slide10"
+                    > 
+
+              <script type='text/javascript'>
+                
+                //Walk Pct Hide
+                $(function() { $('#walk_pct10').hide(); });
+                $(function() { $('#walk_pct_header').hide(); }); //Move above the loop
+
+                //Active Column Toggle
+                $(function() { $('#active_header').hide(); }); //Move above the loop
+                $(function() { $('#active_row10').hide(); });
+                
+                $('#show_active').click(function() {
+                    if( $(this).is(':checked')) {
+                        $("#active_header").show();
+                        $("#active_row10").show();
+                    } else {
+                        $("#active_header").hide();
+                        $("#active_row10").hide();
+                    }
+                });
+
+                //Active Row Toggle
+                //$('#active10').click(function() {
+                //    if( $(this).is(':checked')) {
+                //        $("#test_active10").show();
+                //    } else {
+                //        $("#test_active10").hide();
+                //    }
+                // });
+
+                //Walk Slider
+                $("#slide10").slider();
+                $("#slide10").on('slideStop', function(slideEvt) {
+                    if(slideEvt.value =='1'){
+                      $("#slide10val").text('Unwalked');
+                      $("#slide10val").removeClass( "label-warning label-success" ).addClass("label-default");
+                      $("#walk_pct10").hide();
+                    }
+                    else if(slideEvt.value =='2'){
+                      $("#slide10val").text('Out');
+                      $("#slide10val").removeClass("label-default label-success").addClass("label-warning");
+                      $("#walk_pct10").hide();
+                    }
+                    else if(slideEvt.value =='3'){
+                      $("#slide10val").text('Walked');
+                      $("#slide10val").removeClass( "label-default label-warning" ).addClass("label-success");
+                      $("#walk_pct10").show();
+                      $("#walk_pct_header").show()
+                    }
+                });
+
+
+            </script>
+              
+              <td>
+                <input type="text" id="walk_pct10" data-slider-id="walk_pct10" data-provide="slider" data-slider-min="0"data-slider-max="100" data-slider-step="10" data-slider-value="100" style="width: 75px;"></td>
+                </div>
+              <td></td>
+              <td>
+
+              <div id='active_row10'> <input type="checkbox" checked data-toggle="toggle" data-size="small"></div>
               </td>
             </tr>
           
