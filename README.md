@@ -33,5 +33,5 @@ The goal of the GOTV tracker is to solve for this. There are a few guiding goals
 #### Demos
 I am in the process of developing this and will be adding more links as they are developed.
 
-- (Data Entry)[/gotvtracker/data_entry]
+- [Data Entry](/gotvtracker/data_entry)
   
